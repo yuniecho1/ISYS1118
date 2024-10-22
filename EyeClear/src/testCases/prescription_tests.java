@@ -1,5 +1,6 @@
 package testCases;
 
+import main.Prescription;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.fail;
 
@@ -61,3 +62,4 @@ class testCase1 {
         Prescription invalidPrescription = new Prescription(6, "John", "Smith", "123 Long Street, City, 56789, Country", 1.50f, 190.00f, 2.00f, examDate, "Dr. Johnson");
         assertFalse(invalidPrescription.addPrescription(), "Prescription should fail due to axis value out of range (0 to 180).");
     }
+}
