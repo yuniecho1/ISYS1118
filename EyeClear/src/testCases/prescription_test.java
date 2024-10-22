@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import java.util.Date;
 
-class testCase1 {
+class prescription_test {
 
     Prescription prescription;
     Date examDate;
@@ -38,7 +38,7 @@ class testCase1 {
     void testInvalidLastName() {
         // Last name less than 4 characters
         Prescription invalidPrescription = new Prescription(3, "John", "Smi", "123 Long Street, City, 56789, Country", 1.50f, 90.00f, 2.00f, examDate, "Dr. Johnson");
-        assertFalse(invalidPrescription.addPrescription(), "Prescription should fail due to invalid last name (less than 4 characters).");
+        assertFalse(invalidPrescription.addPrescription(), "Prescription should fail due to invalid last name (more than 20 characters).");
     }
 
     @Test
