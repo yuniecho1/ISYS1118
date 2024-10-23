@@ -16,7 +16,6 @@ public class Prescription {
     private float cylinder;
     private Date examinationDate;
     private String optometrist;
-    private String[] remarkTypes = {"Client", "Optometrist"};
     private ArrayList<String> postRemarks = new ArrayList<>();
     
  // Constructor to initialize Prescription object
