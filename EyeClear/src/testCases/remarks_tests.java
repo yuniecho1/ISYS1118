@@ -1,14 +1,23 @@
 package testCases;
 
 import main.Prescription;
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.Date;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class remarks_tests {
 	Prescription prescription;
-    Date examDate;
+	Date examDate;
+
+    @BeforeEach
+    void setUp() {
+        // Initialize the prescription object before each test
+        examDate = new Date();
+        prescription = new Prescription(1, "John", "Doe", "123 Long Street, City, 56789, Country", 1.50f, 90.00f, 2.00f, examDate, "Dr. Johnson");
+    }
 
 	@Test
     void testValidRemark() {
